@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<userdata> 
+  <person name="张三"> 
+    <username>zhangsan</username>  
+    <password>111111</password>  
+    <job>worker</job> 
+  </person>  
+  <person name="李四"> 
+    <username>lisi666</username>  
+    <password>222222</password>  
+    <job>doctor</job> 
+  </person>  
+  <person name="王五"> 
+    <username>wangwu888</username>  
+    <password>333333</password>  
+    <job>cooker</job> 
+  </person>  
+  <person name="鄢秋实"> 
+    <username>yqs</username>  
+    <password>888888</password>  
+    <job>Boss</job> 
+  </person>  
+  <person name="石水山"> 
+    <username>sss</username>  
+    <password>444</password>  
+    <job>Boss</job> 
+  </person>  
+  <person name="赵六"> 
+    <username>zhaoliu666</username>  
+    <password>666666</password>  
+    <job>Boss</job> 
+  </person>  
+  <person name="zhangsan">
+    <username>111111</username>
+    <password>zdf</password>
+    <job>worker</job>
+  </person>
+</userdata>

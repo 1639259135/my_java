@@ -1,0 +1,58 @@
+public class Cat{
+	private String name;
+	Private Person owner;
+	
+	//构造方法
+	public Cat(Peson owner){
+		//将括号中的参数owner的值,赋值给了属性owner
+		this.owner = owner;
+	}
+	
+	public String getName(){
+		return name;
+	}
+	public void setName(Striing name){
+		this.name = name;
+	}
+	
+	public Person getOwner(){
+		return owner;
+	}
+	public void setOwner(Person owner){
+		this.owner = owner
+	}	
+}
+
+public class Person{
+	private String name;
+	public String getName(){
+		return name;
+	}
+	public void setName(String name){
+		this.name = name;
+	}
+}
+
+public class Main{
+	public static void main(String[] args){
+		Person zhangsan = new Person;
+		Cat cat = new Cat(zhangsan);
+		cat.setName("Tom");
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

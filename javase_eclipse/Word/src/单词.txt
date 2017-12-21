@@ -1,0 +1,23 @@
+import 导入
+array 数组
+Scanner	
+console 控制台
+continue 继续
+break 	
+exception = 异常
+index 索引；角标；下标
+out of bounds 越界
+NullPointException 空指针
+source 源
+resource 资源
+generate 生成
+duplicate 重复
+extends 继承
+abstract 抽象的
+final 最终；不可变
+instanceof 判断对象的类型
+ClassCastException 类型转换异常
+format 格式
+date 日期
+data 数据
+random 随机数

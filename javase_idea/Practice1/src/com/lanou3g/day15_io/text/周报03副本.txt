@@ -1,0 +1,73 @@
+һ,����:
+��������:List list = new ArrayList();List��һ���ӿ�,ArrayList��List�ӿڵ�һ��ʵ����;
+���ϳ���:list.size();
+length:���鳤��,��һ������; legnth():�ַ�������;size():���Ϸ���,��ȡ���ϵĳ���;
+���������Ԫ��:list.add("����");add������������һ�����͵Ķ���
+�����������Ͱ�װ��:int-->Integer;char-->Characer;byte-->Byte;short-->Short;
+	long-->Long;boolean-->Boolean;double-->Double;float-->Float;
+�Զ�װ��:Integer a=1;�Զ�����:int b=a;
+Map:��һ���ӿ�;
+����һ��Map;Map map = new HashMap();���Դ������,��ŵ����ݶ��Ǽ�ֵ��;
+��ֵ��:name = "����";age = 14;������һһ��Ӧ�Ĺ�ϵ�ͽм�ֵ��;
+���Ԫ��:put����,map.put("name","����");���յĵ�һ��ֵ��ʾkey,��;�ڶ���ֵ��ʾvalue,ֵ;
+����map�����ַ���:1.map.keySet();2.Set����;3.������:iterator;4.map.value()����valueֵ;
+List��Set����:List����,���ظ�;Set����,�����ظ�;
+��ǿforѭ��;for(Object o : map.keySet()){sout(map.get(o).toString())};
+iterator.hasNext()�������һ��ֵ�ͷ���һ��true;
+��,����:�淶������װ������
+List<String> list = new ArrayList<>();���:list.add("����");����:for(String s : list){sout(s)};
+Map<String,Student> map = new HashMap<>();���:map.put("����",new Student);Student ���� = map.get("����");
+���ͽӿ�:public interface OperatedDB<T>{T perated(T t)};
+������:public class Databaswutil<T>{public void save(T t){ } };
+���ͷ���:public static <T> void test(T t){ };public static <E> E test2(){ };
+��,�ݹ�:�Լ����Լ�(����ѭ��);��ӡ�žų˷���,�ַ�����ת
+�ظ��Ĳ���,�����㲻֪��ʲôʱ�����,�кܶ��,�����㲻ȷ���м���
+��,����:
+ͨ����������õ�һ�����������Ϣ,������Ա����,������;
+�����:Student.class;
+��������:Method show = Student.class.getMethod("d",Interget.class);Student stu = Student.class.newInstance();
+�ɱ����:public void showName(String... name);��name����һ������;
+��,�쳣:Exception;throw:�������׳�һ���쳣����;throws:�ڷ����������������ܻ��׳��쳣������:
+try{1....;2(�����쳣)...;3...}catch(xxxException xe){4...}catch(yyyException ye){ }finally{5...};
+2�׳��쳣,ִ��˳��:1245,5һ����ִ��,��ʹ��try��catch��return,Ҳ��ִ��;��ע��,��Χ����쳣��������;
+�쳣��ʹ�÷�ʽ:1,��������;2,����һ����Ϣ�����;
+��,xml����:SAXReader saxReader = new SAXreader();��xml�˵�java����Ĺ�����;
+Document documen = saxReader.read(new File(path));�ҵ���Ҫ�������ļ���ַ;
+Element root = document.getRootElement();��ø��ڵ�;
+List<Element> studentList = root.element();��ø��ڵ��µ������ӱ�ǩ,�������;
+Attribute name = student.attribute("name");����ӱ�ǩ�µ�����;
+name.getValue();���name���Ե�ֵ;
+XMLд��:Document document = DocumentHelper.currteDocument();����һ��Document����;
+Element element = document.addElement("students");Document���������һ��Ԫ�ؽ�students,���ظ�element�������,����ǩ;
+element.addText("����һ��xuesheng");��students����ı�;
+Element student = document.addElement("students");��students����ӱ�ǩ;
+student.addAttribute("name","����");��student�ӱ�ǩ������Ժ�����ֵ;
+student.addText();����ı�;
+XMLWriter xmlWriter = new XMLWriter(new FileWriter(path));д��xml���ļ���ַ;
+xmlWriter.writer(document);д��doucument�е�����
+xmlWriter.close();��������߹ر�,�ѹ����е�����д���ļ���;
+��,�߳�:Thread:Thread thread = new HelloThread();
+thread = new Thread(new HelloRunnable());����һ��Runnable��ʵ�������;
+thread = newThread(new Runnable(){public void run(){for(int i=0;i<500;i++){sout("���������ڲ���"+i)}}});���߳�;
+thread.start();����һ�����߳�;
+for(...){sout(Thread.currteThread().getName())};���߳�;
+Thread�ľ�̬����currentThread���԰������ǻ�õ�ǰִ�е��̶߳���,��������̶߳����getName�����������;
+�ڲ���:������һ�����ڲ�����,���û������,�ͽ������ڲ���;
+GC:�������ǰ��ڴ��в��õĶ������ٵ�,�ͷſռ�Ĺ���;
+��ջʽִ��:����̹߳�ͬȥ��ռCPU��ִ��Ȩ,˭����˭ִ��,���Իῴ������߳̽������;
+ԭ���Բ���:int a=2;ֻ��һ��,��ԭ���Բ���;int b=a+1;����ԭ���Բ���,������:1.�õ�a��ֵ,1.a��1��ӵõ���,3.���͸�b;
+synchronized:ͬ��:������ȿ�ʼ��,�ǵ�����������ڿ�ʼ;
+public synchronized void sellTicket(){for(...){sout()}};
+
+
+
+
+
+
+
+
+
+
+
+
+

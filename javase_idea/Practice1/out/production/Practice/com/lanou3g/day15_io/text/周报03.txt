@@ -1,0 +1,73 @@
+一,集合:
+创建集合:List list = new ArrayList();List是一个接口,ArrayList是List接口的一个实现类;
+集合长度:list.size();
+length:数组长度,是一个属性; legnth():字符串长度;size():集合方法,获取集合的长度;
+给集合添加元素:list.add("张三");add方法接收任意一个类型的对象
+基本数据类型包装类:int-->Integer;char-->Characer;byte-->Byte;short-->Short;
+	long-->Long;boolean-->Boolean;double-->Double;float-->Float;
+自动装箱:Integer a=1;自动拆箱:int b=a;
+Map:是一个接口;
+创建一个Map;Map map = new HashMap();可以存放数据,存放的数据都是键值对;
+键值对:name = "张三";age = 14;像这种一一对应的关系就叫键值对;
+添加元素:put方法,map.put("name","张三");接收的第一个值表示key,键;第二个值表示value,值;
+遍历map有四种方法:1.map.keySet();2.Set集合;3.迭代器:iterator;4.map.value()遍历value值;
+List和Set区别:List有序,可重复;Set无序,不可重复;
+增强for循环;for(Object o : map.keySet()){sout(map.get(o).toString())};
+iterator.hasNext()如果有下一个值就返回一个true;
+二,泛型:规范集合中装的内容
+List<String> list = new ArrayList<>();添加:list.add("李四");遍历:for(String s : list){sout(s)};
+Map<String,Student> map = new HashMap<>();添加:map.put("张三",new Student);Student 张三 = map.get("张三");
+泛型接口:public interface OperatedDB<T>{T perated(T t)};
+泛型类:public class Databaswutil<T>{public void save(T t){ } };
+泛型方法:public static <T> void test(T t){ };public static <E> E test2(){ };
+三,递归:自己调自己(不是循环);打印九九乘法表,字符串反转
+重复的操作,并且你不知道什么时候结束,有很多层,并且你不确定有几层
+四,反射:
+通过反射可以拿到一个类的所有信息,包括成员变量,方法等;
+类对象:Student.class;
+方法对象:Method show = Student.class.getMethod("d",Interget.class);Student stu = Student.class.newInstance();
+可变参数:public void showName(String... name);将name看成一个数组;
+五,异常:Exception;throw:方法里抛出一个异常对象;throws:在方法声明中声明可能会抛出异常的类型:
+try{1....;2(可能异常)...;3...}catch(xxxException xe){4...}catch(yyyException ye){ }finally{5...};
+2抛出异常,执行顺序:1245,5一定会执行,即使在try或catch中return,也会执行;但注意,范围大的异常放在下面;
+异常的使用方式:1,控制流程;2,传递一个信息给外界;
+六,xml解析:SAXReader saxReader = new SAXreader();将xml运到java世界的工具类;
+Document documen = saxReader.read(new File(path));找到需要解析的文件地址;
+Element root = document.getRootElement();获得根节点;
+List<Element> studentList = root.element();获得根节点下的所有子标签,遍历输出;
+Attribute name = student.attribute("name");获得子标签下的属性;
+name.getValue();获得name属性的值;
+XML写入:Document document = DocumentHelper.currteDocument();创建一个Document对象;
+Element element = document.addElement("students");Document对象中添加一个元素叫students,返回给element这个引用,根标签;
+element.addText("我是一堆xuesheng");给students田间文本;
+Element student = document.addElement("students");给students添加子标签;
+student.addAttribute("name","张三");给student子标签添加属性和属性值;
+student.addText();添加文本;
+XMLWriter xmlWriter = new XMLWriter(new FileWriter(path));写入xml的文件地址;
+xmlWriter.writer(document);写入doucument中的内容
+xmlWriter.close();将这个工具关闭,把工具中的内容写进文件中;
+七,线程:Thread:Thread thread = new HelloThread();
+thread = new Thread(new HelloRunnable());创建一个Runnable的实现类对象;
+thread = newThread(new Runnable(){public void run(){for(int i=0;i<500;i++){sout("我是匿名内部类"+i)}}});子线程;
+thread.start();开启一个子线程;
+for(...){sout(Thread.currteThread().getName())};主线程;
+Thread的静态方法currentThread可以帮助我们获得当前执行的线程对象,调用这个线程对象的getName方法获得名称;
+内部类:定义在一个类内部的类,如果没有名字,就叫匿名内部类;
+GC:帮助我们把内存中不用的对象销毁掉,释放空间的工具;
+抢栈式执行:多个线程共同去抢占CPU的执行权,谁抢到谁执行,所以会看到多个线程交替出现;
+原子性操作:int a=2;只有一步,是原子性操作;int b=a+1;不是原子性操作,有三步:1.得到a的值,1.a与1相加得到和,3.将和给b;
+synchronized:同步:如果你先开始了,那等你结束后我在开始;
+public synchronized void sellTicket(){for(...){sout()}};
+
+
+
+
+
+
+
+
+
+
+
+
+

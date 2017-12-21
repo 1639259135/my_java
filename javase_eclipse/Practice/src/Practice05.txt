@@ -1,0 +1,82 @@
+public class Student {
+	//封装
+	private String name = "天山童姥";
+	
+	//暴露一个公共的方法去获取
+	public String getName(){
+		return name ;
+	}
+	
+	//暴露一个公共的方法去设置
+	public void setName(String n){
+		name = n;
+	}
+	
+	
+	
+	public void smile(){
+		System.out.println("心里乐开了花");
+	}
+	
+	private void cry(){
+		System.out.println("哭的像个小孩子");
+	}
+	
+	protectde void angry(){
+		System.out.println("气的像一只dog");
+	}
+	
+	String sad(){
+		return "爱是一道光";
+	}
+
+}
+
+
+
+
+public class Main {
+	public static void main (String[] args){
+	
+		//四种修饰符
+		Student stu = new Student();
+		stu.smile();
+		
+		stu.smile();
+		
+		//cry 是private修饰的,所以在Student类外面,找不到
+//		stu.cry();
+		
+		//angry是protected修饰的,所以在test包外面是找不到的
+		//这就叫做同包可以使用
+		//因为main所在的包与Student这个类,所在的不是同一个包,所以不可用
+//		stu.angry();
+
+		 
+	
+	}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

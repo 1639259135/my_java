@@ -1,0 +1,120 @@
+public class Car{
+	private int wheels;
+	private String color;
+	
+	public int getWheels(){
+		return whells;
+	}
+	public void setWheels(int whells){
+		this.wheels = wheels;
+	}
+	public String getColor(){
+		return color;
+	}
+	public void setColor(String color){
+		this.color = color;
+	}
+}
+
+----------------
+
+public class BigCar extends Car{
+	//定义在类的{}中的属性,叫做成员变量或成员属性
+	//show方法中定义的w叫做局部变量
+	
+	//局部变量只定义在它的{}中有效
+	//这个变量的有效范围叫做作用域
+	private String name = "大卡车";
+	public void pullGoods(){
+		System.out.pringln("拉货去了");
+	}
+	public void show(){
+		//因为wheels是私有的,所以子类无法访问,也就无法赋值
+//		wheels = 4;
+		int w = getWheels();
+		System.out.println("轮胎个数为:" + w);
+	}
+	
+	
+	public int getWheels(){
+		return super.getWheels();
+	}
+	public void setWheels(int wheels){
+		super.setWheels(wheels);
+	}
+	public String getColor(){
+		return super.getColor();
+	}
+	public void setColor(String color){
+		System.out.println("我是子类中的setColor方法:" + color);
+		super.setColor();
+	}
+	
+	public void showThis(){
+		/*
+		 this是在调用本类自己的方法
+		 super是在调用分类的方法
+		 this叫做本类对象
+		 但是一般没有听说叫super为父类对象
+		 
+		 this可以调用本类的属性,方法
+		*/
+		this.setColr("子类设置黑色");
+		super.setColor("父类设置绿色");
+	}
+	
+	public void speed(){
+		super.speed();
+		System.out.println("加速度为80");
+	}
+}
+
+----------------------
+
+publci class RunCar extends Car{
+	//跑车的加速度比一般的车快
+	//所以我们复写父类Car中加速的方法
+	//复写:就是把父类中继承的方法修改
+	@Override	//注解:用来帮助我们检测speed方法是否是从父类继承过来的
+	public void speed(){
+		super.speed();
+		System.out.println("加速度为240");
+	}
+}
+
+-------------------
+
+public class MyThis{
+	String name;
+	public void myName(){
+		System.out.println(this.name);
+	}
+}
+
+------------------
+
+public class Main{
+	public static void main(String[] args){
+		BigCar big = new BigCar();
+//		big.setColor("黑色");
+		big.showThis();
+		System.out.println(big.getColor());
+		
+		MyThis myThis = new MyThis();
+		myThis.name = "张三";
+		
+		MyThis m = new MyThis();
+		m.name = "李四";
+		
+		myThis.myName();	//方法里的this就是指myThis
+		m.myName();		//方法里的this就是指m
+		
+		RunCar runCar = new RunCar();
+		runCar.speed();
+		
+		big.speed();
+		/*
+		  这两个speeds方法都是从Car中继承过来的
+		  但是每个方法的输出的内容都不相同
+	}
+}

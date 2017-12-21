@@ -1,0 +1,31 @@
+1, xml文件的写法
+    xml文件中的标签,属性,文本之间的关系
+
+
+2, 标记,元素,指的都是标签
+
+
+3,读取xml中的内容
+    SAXReder
+
+    所有xml中的数据,都会被封装到document中
+
+    Element类,表示xml中<xxx>标签(元素,标记)
+
+    Attribute类,表示xml中的<xx yy="">这个yy,也就是属性
+
+    Text类,表示文本
+
+    类或对象,是事物的抽象
+
+
+4,写入内容到xml文件
+    DocumentHelper类帮助我们创建一个document对象
+
+    addElement("元素名");天加元素
+     xxxxxx              添加属性
+     xxxxxx              添加文本
+
+    XMLWriter类:
+       帮助我们把document写入xml文件中
+
