@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="Day35_Jar包:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Day35_Jar_jar</output-path>
+    <root id="root">
+      <element id="archive" name="Day35_Jar包.jar">
+        <element id="module-output" name="Day35_Jar包" />
+      </element>
+    </root>
+  </artifact>
+</component>

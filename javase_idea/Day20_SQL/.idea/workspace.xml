@@ -36,36 +36,9 @@
       <file leaf-file-name="console.sql" pinned="false" current-in-tab="true">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8c481487-93f2-4c99-ac64-c5f10b75a6c9/console.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3750">
-              <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+            <state relative-caret-position="3630">
+              <caret line="154" column="6" lean-forward="true" selection-start-line="154" selection-start-column="6" selection-end-line="154" selection-end-column="6" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hw_dmt" pinned="false" current-in-tab="false">
-        <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_dmt">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dmt" pinned="false" current-in-tab="false">
-        <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.dmt">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="employee" pinned="false" current-in-tab="false">
-        <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.employee">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
             </state>
           </provider>
         </entry>
@@ -111,8 +84,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -124,14 +96,16 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Day21_JDBC" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -240,11 +214,12 @@
       <updated>1513649158063</updated>
       <workItem from="1513649161851" duration="31971000" />
       <workItem from="1513731262230" duration="613000" />
+      <workItem from="1513991645587" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32584000" />
+    <option name="totallyTimeSpent" value="33201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="191" y="104" width="1429" height="955" extended-state="0" />
@@ -257,19 +232,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09349891" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.094959825" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13148284" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -290,146 +265,40 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.hw_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.u_coll_bk">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.paylevel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.stu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.test">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.st_year">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.comment">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.type">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.hw_user">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.u_coll_bk">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.book">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_stu">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_emp">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8c481487-93f2-4c99-ac64-c5f10b75a6c9/console.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3750">
-          <caret line="161" column="19" lean-forward="false" selection-start-line="161" selection-start-column="19" selection-end-line="161" selection-end-column="19" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_dmt">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.book" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.comment" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.hw_user" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.type" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day18.u_coll_bk" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.paylevel" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.stu" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.test" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.st_year" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.comment" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.type" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.hw_user" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.u_coll_bk" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day20.book" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_stu" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_emp" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8c481487-93f2-4c99-ac64-c5f10b75a6c9/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3630">
+          <caret line="154" column="6" lean-forward="true" selection-start-line="154" selection-start-column="6" selection-end-line="154" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.dmt">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.employee">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.hw_dmt" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.dmt" />
+    <entry file="das://table:/9d5d32e3/8c481487-93f2-4c99-ac64-c5f10b75a6c9/day21.employee" />
   </component>
 </project>

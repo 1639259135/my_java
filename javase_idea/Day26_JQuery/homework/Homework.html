@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework</title>
+    <style type="text/css">
+        div{
+            position: fixed;
+        }
+        #one{
+            width:500px;
+            height: 500px;
+            text-align: center;
+            background-color: #bbd6ff;
+            border: solid 1px rgba(154, 162, 159, 0.12);
+        }
+        #top{
+            left: 8px;
+            top: 8px;
+            width: 500px;
+            height: 30px;
+            font-size: 20px;
+            text-align: center;
+            background-color: blue
+        }
+        #aim{
+            left: 240px;
+            top: 38px;
+            width: 50px;
+            height: 30px;
+            font-size: 20px;
+            color: white;
+            text-align: center;
+            background-color: black;
+        }
+        #two{
+            left: 510px;
+            top: 8px;
+            width: 200px;
+            height: 400px;
+            text-align: center;
+            background-color: lightgoldenrodyellow;
+            border: solid 1px rgba(187, 214, 255, 0.12);
+        }
+        button{
+            width: 50px;
+            height: 30px;
+        }
+    </style>
+    <script src="../../Day27_JQPractice/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div id="one">
+        <div id="top">点击设置样式</div>
+        <div id="aim">哈哈</div>
+    </div>
+
+    <div id="two">
+        选择背景<br><br>
+        <button id="c1" style="background-color: red">红色</button>
+        <button id="c2" style="background-color: yellow">黄色</button>
+        <button id="c3" style="background-color: blue">蓝色</button>
+        <br><br>选择宽度<br><br>
+        <button id="w1">100</button>
+        <button id="w2">200</button>
+        <button id="w3">300</button>
+        <br><br>选择高度<br><br>
+        <button id="h1">100</button>
+        <button id="h2">200</button>
+        <button id="h3">300</button>
+        <br><br>
+        <button id="no">恢复</button>
+        <button id="yes">确定</button>
+
+    </div>
+</body>
+<script type="text/javascript">
+    $('#c1').click(function () {
+        $('#aim').css({"backgroundColor":"red"})
+    });
+    $('#c2').click(function () {
+        $('#aim').css({"backgroundColor":"yellow"})
+    });
+    $('#c3').click(function () {
+        $('#aim').css({"backgroundColor":"blue"})
+    });
+
+    $('#w1').click(function () {
+        $('#aim').css({"width":"100px","left":"200px"})
+    });
+    $('#w2').click(function () {
+        $('#aim').css({"width":"200px","left":"150px"})
+    });
+    $('#w3').click(function () {
+        $('#aim').css({"width":"300px","left":"100px"})
+    });
+
+    $('#h1').click(function () {
+        $('#aim').css({"height":"100px"})
+    });
+    $('#h2').click(function () {
+        $('#aim').css({"height":"200px"})
+    });
+    $('#h3').click(function () {
+        $('#aim').css({"height":"300px"})
+    });
+
+    $('#yes').click(function () {
+        $('#two').css({"visibility":"hidden"})
+    });
+    $('#top').click(function () {
+        $('#two').css({"visibility":"visible"})
+    });
+
+    $('#no').click(function () {
+        $('#aim').attr({"style":"#aim"})
+    });
+
+
+
+
+</script>
+</html>

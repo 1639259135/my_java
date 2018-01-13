@@ -13,6 +13,7 @@ import sun.security.util.Password;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.sql.PreparedStatement;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -37,29 +38,47 @@ public class Register {
         boolean m4 = Pattern.compile("(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{1,20}").matcher(password).matches();
         System.out.println(password + "\n" +num + "\n"+email + "\n"+m4);
 
-
         if (ID == true && (num == true || email == true) && m4 == true){
+            JdbcUtil.execute(coon -> {
+                PreparedStatement pstate = coon.prepareStatement(
+                        "INSERT INTO hw_user VALUES (NULL , ? ,?,?)");
 
-        SAXReader saxReader = new SAXReader();
-        Document document = saxReader.read(new File("src/com/lanou3g/javase_practice/UserData.xml"));
+//                pstate.setString(1,id);
+                pstate.setString(1,userName);
+                pstate.setString(2,password);
 
-        Element userdata = document.getRootElement();
-        Element user = userdata.addElement("user");
-        user.addAttribute("name",id);
-        Element username = user.addElement("usernmae");
-        username.addText(userName);
-        Element pw = user.addElement("password");
-        username.addText(password);
+                pstate.addBatch();
+                pstate.executeBatch();
+                return pstate;
+            });
 
-        OutputFormat outputFormat = OutputFormat.createPrettyPrint();
-        outputFormat.setEncoding("UTF-8");
-
-        XMLWriter xmlWriter = new XMLWriter(new FileWriter("src/com/lanou3g/javase_practice/UserData.xml"),outputFormat);
-        xmlWriter.write(document);
-
-        xmlWriter.close();
-        System.out.println("注册成功:\n" + "用户:" + userName + "\t 账号:" + id);
         }
+
+
+
+        //xml登录保存
+//        if (ID == true && (num == true || email == true) && m4 == true){
+//
+//        SAXReader saxReader = new SAXReader();
+//        Document document = saxReader.read(new File("src/com/lanou3g/javase_practice/UserData.xml"));
+//
+//        Element userdata = document.getRootElement();
+//        Element user = userdata.addElement("user");
+//        user.addAttribute("name",id);
+//        Element username = user.addElement("usernmae");
+//        username.addText(userName);
+//        Element pw = user.addElement("password");
+//        username.addText(password);
+//
+//        OutputFormat outputFormat = OutputFormat.createPrettyPrint();
+//        outputFormat.setEncoding("UTF-8");
+//
+//        XMLWriter xmlWriter = new XMLWriter(new FileWriter("src/com/lanou3g/javase_practice/UserData.xml"),outputFormat);
+//        xmlWriter.write(document);
+//
+//        xmlWriter.close();
+//        System.out.println("注册成功:\n" + "用户:" + userName + "\t 账号:" + id);
+//        }
 //        else{
 //            throw new RegisterUserNameErrorException();
 //        }

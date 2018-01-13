@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气</title>
+    <script src="../../Day27_JQPractice/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">武汉天气</button>
+    <div></div>
+</body>
+<script type="text/javascript">
+//    $('#btn').click(function () {
+//        $.get("http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=武汉&day=0&dfc=3",
+//            function (data) {
+//                var a = data['city'];
+//                console.log(a);
+////                $('<h1>').text("今天天气:" + a)
+//            }
+//        )
+//    })
+
+//    $('#btn').click(function () {
+//        $.getJSON({
+//                url : "http://api.k780.com/?app=weather.future&weaid=1&&appkey=29836&sign=4fe58a60443a900a251f8b05763d4622&format=json",
+//                dataType: "jsonp",
+//                type:"Post",
+//                jsonCallback: "jsonCallback"
+//            }, function (data, status) {
+//                $.each(data, function (index, result) {
+//                    $('<h1>').text("城市" + result['citynm'] + "\n\t\t天气" + result['weather'])
+//                })
+//            }
+//        )
+//    });
+
+$.getJSON({
+    url : "http://api.k780.com/?app=weather.today&weaid=wuhan&appkey=10003&sign=b59bc3ef6191eb9f747dd4e83c99f2a4&format=json&jsoncallback= ?",
+        dataType : "jsonp",
+        type:"Post",
+        jsonpCallback: "jsonpCallback"
+    },function (data,status) {
+    console.log(status);
+    console.log(data);
+    $.each(data,function (i,data) {
+        $('div').text("citynm : "+data['citynm'] + "\nweather : "+data['weather'] + "\ttemperature :" +data['week'])
+    })
+
+})
+</script>
+</html>

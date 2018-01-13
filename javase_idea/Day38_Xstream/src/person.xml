@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Person>
+  <users>
+    <User>
+      <username>lisi</username>
+      <password>123</password>
+    </User>
+    <User>
+      <username>zhangsan</username>
+      <password>123</password>
+    </User>
+    <User>
+      <username>wangwu</username>
+      <password>123</password>
+    </User>
+  </users>
+</Person>

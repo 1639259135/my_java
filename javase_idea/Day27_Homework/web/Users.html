@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <script src="js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <button id="btn">点我查看</button>
+    <table border="2">
+
+    </table>
+</body>
+<script type="text/javascript">
+    $('#btn').click(function () {
+        $('table>tr').remove();
+        $.get("http://localhost:8080/user",
+            function (data,status) {
+//                console.log(status);
+                if (status != null){
+                    var pj = $.parseJSON(data);
+                    if (pj != null){
+                        $('table').append(
+                            $('<tr>').append(
+                                $('<td>').text("uid")
+                            ).append(
+                                $('<td>').text("uname")
+                            ).append(
+                                $('<td>').text("age")
+                            ).append(
+                                $('<td>').text("loc")
+                            )
+                        );
+                        $.each(pj,function (index,user) {
+                            $('table').append(
+                                $('<tr>').append(
+                                    $('<td>').text(user['uid'])
+                                ).append(
+                                    $('<td>').text(user['uname'])
+                                ).append(
+                                    $('<td>').text(user['age'])
+                                ).append(
+                                    $('<td>').text(user['loc'])
+                                )
+                            );
+                        })
+                    }
+                }
+            }
+        )
+    })
+</script>
+</html>

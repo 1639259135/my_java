@@ -1,0 +1,113 @@
+一,链表:
+    链表是一种屋里储存单元上非连续,非顺序的存储结构,
+        数据元素的逻辑顺序是通过链表中的指针连接次序实现的.
+        链表时是由一系列节点(链表中每一个元素称之为节点)组成,
+        节点可以在运行时动态生成.每个节点包括两个部分:
+        一个是储存数据元素的数据域,另一个是储存下一个节点地址的地址域;
+    链表分为:单向链表,双向链表和循环链表;
+    链表类似数组,但长度可变,,是一种链式储存结构,
+    链表有节点组成,每个节点储存一个对象和一个指向他下一个节点的指针;
+    链表的第一个元素叫做根元素;
+    链表有以下方法(都通过接口实现):
+        public interface Link{
+            void add(Object data);          //添加数据;
+            int size();                     //获得链表大小;
+            boolean isEmpty();              //判断链表是否为空;
+            boolean contains(Object data);  //判断数据是否存在;
+            Object get(int index);          //根据索引获得元素;
+            void set(int index,Object data); //修改元素;
+            void remove(Object data);       //删除某个元素;
+            void clear();                   //清空数据;
+            Object[] toArray();             //返回数据
+        }
+
+二,idea生成jar包:
+    1,写一个用作jar包的项目;
+    2,在项目上鼠标右键,-->Open Module Settings(快捷键ctrl+alt+shift+s);
+    3,选择 Artifacts --> + --> JAR --> From modules with dependencies...;
+    4,Main Class 是你这个项目(脚本)的主方法,就是要运行的类,选一个;
+    5,JAR files from libraries选项: 选第一个打包完就是一个jar,第二个打包完外带项目中的jar包;
+    6,确定;
+    7,将Build on make勾选上,确定;
+    8,选择菜单栏 Build --> Build Artifacts... --> xxx.jar --> Build;
+    9,生成jar包完成;
+
+三,DbcpUtil连接池(DbcpUtil工具类):
+    需要的jar包:commons的dbcp.jar,dbutils-1.6.jar,logging-1.1.1.jar,pool-1.6.jar
+        和mysql-connector-java-5.1.18-bean.jar;
+    1,使用静态代码块获取配置文件信息:
+        static{
+            Properties pro = new Properties();
+            ClassLoader cl = DbcpUtil.class.getClassLoader();
+            InputStream is = cl.getResourceAsStream("dbcp.properties");
+            pro.loader(is); //捕获异常;
+            dataSource = BasicDataSourceFactory.createDataSource(properties);   //捕获异常;
+        }
+        private static DataSource dataSource;
+    2,获取连接Connection;
+        public Connection getConnection(){
+            Connection conn = dataSource.getConnection();
+        }
+    3,调用连接:
+        Connection conn = DbcpUtil.getConnection(); //获取连接;
+        conn.close();   //回收连接,而不是关闭;
+
+    4,配置文件:
+        驱动名:
+        DriverClassName=com.mysql.jdbc.Driver
+        路径:day21是数据库
+        url=jdbc:mysql://localhost:3306/day21
+        用户名:
+        username=root
+        密码:
+        password=123
+        初始连接数:
+        initiaSize=30
+        最大连接数:连接数不能超过该值,如果值为非正数,则表示没有限制;
+        maxActive=50
+        最大闲置数:连接池中允许的最大空闲状态数,超过的会被释放,设为负数,表示没有限制;
+        maxIdle=10
+        最小闲置数:空闲连接低于该值,则会创建新的连接,设为0,表示不创建;
+        minIdle=5
+        最长等待时间(ms):当没有连接可用时,连接池等待连续被归还的最大时间,超出该时间,就会抛出异常;
+        maxWait=100
+        连接池是否回收不再使用的连接:
+        removeAbandoned=true
+        程序中允许的空闲连接时间(s),超过就被连接池回收:
+        removeAbandonedTimeout=1
+        回收连接时,是否打印连接的超时错误
+        logAbandoned=true
+
+    5,连接池的好处:
+        资源重用,更快的响应速度,统一的连接管理,避免了链接的泄漏;
+
+四,XStream:
+    需要的jar包:dom4j-1.6.1.jar, xmlpull_1_0_5.jar, xpp3_min-1.1.4c.jar, xstream-1.4.7.jar;
+    1,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

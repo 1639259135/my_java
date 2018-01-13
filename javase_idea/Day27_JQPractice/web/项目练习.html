@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>练习</title>
+    <style type="text/css">
+        div{
+            line-height: 50px; /*文字行距等于div高度,垂直居中*/
+            text-align: center;
+        }
+        #one{
+            width: 500px;
+            height: 50px;
+            background-color: gray;
+        }
+        button{
+            width: 50px;
+            height: 30px;
+            margin: 10px;
+            background-color: white;
+        }
+
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+
+    <div id="one">
+        <button id="add">添加</button>
+        <button id="del">删除</button>
+        <button id="a+">小于0</button>
+        <button id="a-">大于0</button>
+        <button id="flush">刷新</button>
+        <button id="all">ALL</button>
+
+    </div>
+
+    <div id="two"></div>
+
+</body>
+<script type="text/javascript">
+    var number = 0;
+    $('#add').click(function () {
+        var color = ('#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+        var num = Math.ceil(99 - Math.random()*199);
+        $('#two').append($('<div>')
+            .css({"height":"50px","width":"500px","margin":"1px","backgroundColor":color})
+            .attr({"id":number})
+                .text(num)
+        );
+        number += 1;
+        console.log(number);
+    });
+
+    $('#del').click(function () {
+        $('#two>div:last-child').fadeTo("show",0.01,function () {
+            $(this)
+        })
+    });
+//    $("#myButton").click(function() {
+//        $("#myDiv").fadeTo("slow", 0.01, function(){//fade
+//            $(this).slideUp("slow", function() {//slide up
+//                $(this).remove();//then remove from the DOM
+//            });
+//        });
+//    });
+
+    $('#a+').click(function () {
+
+//        var text = $('#two>div:last-child').text;
+//        console.log(text);
+    });
+
+    $('#flush').click(function () {
+        var color = ('#'+('00000'+(Math.random()*0x1000000<<0).toString(16)).slice(-6));
+        var num = Math.ceil(Math.random()*100);
+        for(var i = 1; i <= number; i++){
+            var id = "\'#" + 1 + "\'";
+            $(id).css({"backgroundColor":color})
+                .text(num)
+        }
+
+
+    })
+
+</script>
+</html>

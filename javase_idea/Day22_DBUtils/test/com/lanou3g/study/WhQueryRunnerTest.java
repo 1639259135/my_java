@@ -16,8 +16,8 @@ public class WhQueryRunnerTest {
         根据需求结果的类型,
             选择ResultSetHandler的实现类
         如果结果集为单行单列: ScalarHandler
-        如果想要一个对象的集合: BeanListHandler
         如果想要一个对象: BeanHandler
+        如果想要一个对象的集合: BeanListHandler
         如果想要一个Map: MapHandler
         如果想要一个Map集合: MapListHandler
         如果想要一个数组: ArrayHandler
@@ -58,9 +58,9 @@ public class WhQueryRunnerTest {
     public void queryByBean() throws SQLException {
         List<User> users =
                 new WhQueryRunner().query(
-                JdbcUtil.getConnection(), "select * from hw_user",
-
-                new BeanListHandler<>(User.class)
+                JdbcUtil.getConnection(),
+                        "select * from hw_user",
+                        new BeanListHandler<>(User.class)
 //                new BeanHandler<User>(User.class)
         );
 

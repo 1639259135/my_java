@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>操作元素属性</title>
+    <style type="text/css">
+        .bigRed{
+            color: #37ff01;
+            font-size: 50px;
+        }
+    </style>
+    <script src="../../Day27_JQPractice/js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div>浊酒一杯加我那里,燕然未勒归无计</div>
+</body>
+<script type="text/javascript">
+    console.log(
+        $('div')
+            .attr({"class": "bigRed"})
+            .attr("class")
+    );
+
+
+</script>
+</html>

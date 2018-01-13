@@ -11,6 +11,11 @@ public class Person {
         this.password = password;
     }
 
+    @Override
+    public String toString() {
+        return "Person{" + "userName='" + userName + '\'' + ", id='" + id + '\'' + ", password='" + password + '\'' + '}';
+    }
+
     public Person() {
 
     }

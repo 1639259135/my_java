@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数Function</title>
+    <style type="text/css">
+
+    </style>
+    <script type="text/javascript">
+
+        function helloFunction() {
+            //声明一个Function
+            //名字叫helloFunction
+            //但是并不会被执行,只有被调用了才会执行
+            console.log("hello js function")
+        }
+        helloFunction();
+
+//        对于带参数的函数
+//        如果在调用时,
+    //        传递的参数数量少于参数列表中的参数总数
+    //        那么未被赋值的参数参数值为undefined
+//        如果调用时
+    //        传递的参数个数大于参数列表总参数个数
+    //        那么多余的参数就不会传入函数体中
+    //        不会有影响
+        function paramFunction(name, age) {
+            console.log(name);
+            console.log(age);
+        }
+
+        function resultFunction(a,b) {
+            return a + b;
+        }
+
+        function show(n) {
+            var content = "";
+            for(var i = 1;i<=n;i++){
+                content = content + i + "*" + n + "=" + i*n + "\t";
+            }
+            console.log(content);
+
+            if (n != 9){
+                show(n + 1)
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+    <button onclick="helloFunction()">hello</button>
+    <br>
+    <button onclick="paramFunction('张三',22,'男')">param</button>
+    <br>
+    <button onclick="window.alert(10,resultFunction(20),resultFunction(30,40,50))">点我看结果</button>
+    <br>
+    <button onclick="show(1)"></button>
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过度</title>
+    <style type="text/css">
+        .div{
+            width: 100px;
+            height: 50px;
+            background-color: red;
+            transition: width 2s;/*过度*/
+            margin: 20px;
+        }
+        .div:nth-of-type(1){
+            transition: width 2s linear,
+            height 2s linear 2s;
+        }
+        .div:nth-of-type(3){
+            transition: width 2s linear 2s;
+        }
+        .div:nth-of-type(2){
+            transition: width 2s ease,
+            ;
+        }
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="div">0</div>
+    <div class="div">1</div>
+    <div class="div">2</div>
+    <div class="div">3</div>
+    <button id="btn">点我</button>
+</body>
+<script type="text/javascript">
+    $('#btn').click(function () {
+        $('.div').css({"width":"500px","height":"100px"})
+    })
+</script>
+</html>

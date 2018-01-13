@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS中的数组</title>
+</head>
+
+<body>
+    <h1></h1><h1></h1><h1></h1><h1></h1>
+    <h1></h1><h1></h1><h1></h1><h1></h1><h1></h1>
+
+
+
+
+
+</body>
+<script type="text/javascript">
+    //定义一个数组
+    var array = [1,2,"嘿嘿"]
+
+    //使用角标访问
+    console.log(array[0]);
+
+
+    //循环
+    //使用forEach方法遍历数组
+    //该方法,接收哟个回调函数
+
+    //所以我们定义了一个匿名方法
+    //并给该方法定义了两个参数
+    //当浏览器解析该代码,也就是forEach
+    //会自动帮我们调用传入的方法
+    //并且第一个参数会传入数组的元素
+    //第二个参数会传入钙元素对应的角标
+    array.forEach(function (content,index) {
+        console.log(content + "\t" + index);
+    });
+
+
+    var songs = [ "北风卷地白草折，胡天八月即飞雪。",
+                  "忽如一夜春风来，千树万树梨花开。" ,
+                  "散入珠帘湿罗幕，狐裘不暖锦衾薄。" ,
+                  "将军角弓不得控，都护铁衣冷难着。" ,
+                  "瀚海阑干百丈冰，愁云惨淡万里凝。" ,
+                  "中军置酒饮归客，胡琴琵琶与羌笛。" ,
+                  "纷纷暮雪下辕门，风掣红旗冻不翻。" ,
+                  "轮台东门送君去，去时雪满天山路。" ,
+                  "山回路转不见君，雪上空留马行处。"];
+
+    var h1s = document.getElementsByTagName("h1");
+
+    for (var i = 0; i < h1s.length; i ++){
+        var node = h1s.item(i);
+        node.innerText = songs[i];
+        node.style.color = "blue";
+        node.style.fontSize = "20px";
+        node.style.backgroundColor = "red";
+        node.style.width = "320px";
+    }
+
+
+//    h1s.forEach(function (ele, index) {
+//        ele.innerText = songs[index]
+//    })
+
+</script>
+</html>

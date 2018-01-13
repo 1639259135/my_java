@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加和删除</title>
+</head>
+<body>
+    <div>哈哈哈,来删了我呀</div>
+</body>
+<script type="text/javascript">
+
+    //创建一个h1标签
+    var h1 = document.createElement("h1");
+    h1.style.color = "red";
+    h1.innerText = "傻闺女不知亡国恨,隔江犹唱后庭花";
+
+    var body = document.getElementsByTagName("body");
+    //    document.appendChild(h1);
+    body[0].appendChild(h1);
+
+    //使用父元素,删除div
+    var divs = document.getElementsByTagName("div");
+    body[0].removeChild(divs[0]);
+
+
+</script>
+</html>

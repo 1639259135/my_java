@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .outer{
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            transform-style: preserve-3d;/*3*/
+            /*transform: rotateY(0deg) rotateX(0deg) rotateZ(0deg);!*旋转*!*/
+            /*transform: scaleX(0);!*缩放(倍数)*!*/
+            /*transform: skewX(0deg);!*扭曲*!*/
+            margin-top: 50%;
+            translate:translateY(-50%);
+        }
+        .div{
+            /*margin: 200px auto;!*居中*!*/
+            margin-top: 50%;
+            transform: translateY(-50%);/*自身50%*/
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transform: translateX(200px) translateY(200px) translateZ(200px);
+        }
+    </style>
+    <script src="../js/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div class="outer">
+        <div class="div">扭曲了没</div>
+    </div>
+</body>
+<script type="text/javascript"></script>
+</html>

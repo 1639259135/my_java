@@ -22,10 +22,13 @@ public class Main01 {
         //使用JDBC
         //1,注册驱动:
         DriverManager.registerDriver(new Driver());  //DriverManager: 驱动类
+        DriverManager.registerDriver(new Driver());
 
         //2,获得连接:
         Connection connection = DriverManager.getConnection(    //Connection是一个接口
                 "jdbc:mysql://localhost:3306/day20", "root", "123");    //url: 统一资源定位符
+        Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/ay20","root","123");
 
         System.out.println(connection.getClass().getName());
 
@@ -33,6 +36,7 @@ public class Main01 {
         //statement
         //这个接口,用来声明要执行的mysql语句
         String sql = "select * from hw_user";
+        String sql1 = "SELECT * FROM hw_user";
 
         Statement statement = connection.createStatement();
 
