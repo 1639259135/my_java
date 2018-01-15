@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <!--设置后缀名,可以是du,da,也可以没有后缀名-->
+    <constant name="struts.action.extension" value=","/>
+
+    <!--打开开发模式:使得程序员不会因为更改了struts.xml而频繁的重启服务器,只需跟新资源(第二个)-->
+    <constant name="struts.devMode" value="true"/>
+
+    <constant name="struts.custom.i18n.resources" value="UTF-8"/>
+
+    <!--
+        java类与类之间,通过包来区分,
+        这里,action与action之间,通过package标签来区分
+
+        name:包的名字
+        extends:这个包继承哪个包没
+            我们自定义的可以使用的包
+            一定会直接或间接的继承struts-default
+    -->
+    <!--<package name="b" extends="day39">间接继承</package>-->
+    <package name="day39" extends="struts-default" namespace="/">
+
+        <!--指定一个默认的类-->
+        <default-class-ref class="DefaultAction"/>
+
+        <action name="hello" class="HelloAction" method="hello">
+            <result name="success">hello.jsp</result>
+        </action>
+
+        <action name="show">
+            <result name="success">hello.jsp</result>
+        </action>
+
+        <!--
+            normal_hello,   normal_index,   nor_hello,  nor_index
+            使用通配符作为action的路径,可以扩展方法的结果视图
+                也就是将第一个*所代表的方法,与第二个*所代表的视图
+                合并拼凑
+            在name属性中定义的*
+                在后续使用中,使用方式为{n}, n表示name中的第几个*
+        -->
+        <action name="*_*" class="NormalAction" method="{1}">
+            <result name="success">{2}.jsp</result>
+            <allowed-methods>normal,nor</allowed-methods>
+        </action>
+
+        <action name="api" class="servletapi.ApiAction" method="api">
+            <result name="success">success.jsp</result>
+        </action>
+
+    </package>
+
+    <!--将user.xml文件导入进来-->
+    <include file="use.xml"/>
+
+</struts>

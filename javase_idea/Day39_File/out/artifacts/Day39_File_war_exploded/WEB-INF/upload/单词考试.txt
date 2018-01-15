@@ -1,0 +1,109 @@
+﻿import 导入
+array 数组
+Scanner	
+console 控制台
+continue 继续
+break 	
+exception = 异常
+index 索引；角标；下标
+out of bounds 越界
+NullPointException 空指针
+source 源
+resource 资源
+generate 生成
+duplicate 重复
+extends 继承
+abstract 抽象的
+final 最终；不可变
+instanceof 判断对象的类型
+ClassCastException 类型转换异常
+format 格式
+date 日期
+data 数据
+random 随机数
+element	元素
+type		类型
+library	图书馆	库
+exception	异常
+throw	抛，在方法中抛
+throws	在方法声明中抛
+variable 变量
+
+precede 优于
+declare	声明
+
+Document 文件，文档，文献
+root	根
+element	元素
+attribute 属性
+recursive 递归
+status	状态、
+init	初始化的意思
+
+branch 分支
+commit 提交
+merge 合并
+
+socket
+stream
+input
+output
+Serializable 序列化(接口)
+Expression 表达式
+regular	   正则
+
+create 创建
+database 数据库
+quit  退出
+exit  退出
+
+query 询问
+affected 影响
+row 行
+column 列
+table 表
+second 秒
+xx	分钟
+hour 小时
+description 描述
+SQL
+average 平均
+
+primary key 主键
+foreign key 外键
+constraint 约束
+auto_increment 自增长
+union	合并结果集
+inner join 内连接
+left outer join 左外
+right outer join 右外
+
+
+connection 连接	connection	连接
+register 注册	register
+login 登录	login
+logout 登出	logout
+
+invalid 无效的	invalid	无效的
+reference 引用	reference	引用
+
+absolute 绝对的	absolute	绝对的
+relative 相对的	relative	相对的
+
+navigate 导航	navigate	导航
+location 位置	location	位置
+history 历史	history	历史
+screen 屏幕	screen	屏幕
+
+animate 动画	ainmate 动漫
+parse 解析	parse 解析
+
+request 请求	request	请求
+response 响应	response	响应
+redirect 重定向	redirect 重定向
+
+property 属性	property	属性
+scope 域,范围	scope 范围,域
+
+employee 员工	employee 员工
+salary 工资	salary 工资

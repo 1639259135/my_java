@@ -63,7 +63,7 @@ public class SendMail{
         msg.setSubject("激活账号");
 
         //添加内容,第二个参数表示这是html的内容
-        UserServlet us = new UserServlet();
+//        UserServlet us = new UserServlet();
 
         msg.setContent("\n<a href=\"http://localhost:8080/bookstore/user?method=active&code="
                 + code +"\">点击激活<br>如果无法跳转请手动复制链接到地址栏发送</a>", "text/html;charset=utf-8");

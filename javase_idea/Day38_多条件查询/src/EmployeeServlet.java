@@ -1,3 +1,5 @@
+import net.sf.json.JSONObject;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -69,19 +71,14 @@ public class EmployeeServlet extends HttpServlet {
             page.setPageCode(p);
 
             System.out.println(page.getTotalPages() + "=================");
-            request.setAttribute("page",page);
+            JSONObject jsonObject = JSONObject.fromObject(page);
+            response.getWriter().write(jsonObject.toString());
+//            request.setAttribute("page",page);
 
             request.getRequestDispatcher("/index.jsp").forward(request,response);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
-
-
-
-
-
 
     }
 
