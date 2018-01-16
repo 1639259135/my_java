@@ -3,11 +3,13 @@ package bookstore.book.web;
 import bookstore.book.domain.Book;
 import bookstore.book.service.BookService;
 import bookstore.utils.BaseServlet;
+import net.sf.json.JSONObject;
 
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.util.List;
 
 @WebServlet(name = "BookServlet",urlPatterns = "/book")
@@ -20,6 +22,13 @@ public class BookServlet extends BaseServlet {
         HttpSession session = request.getSession();
 
         List list = bs.queryByCategory("JavaSE");
+
+        JSONObject jsonObject = JSONObject.fromObject(list);
+        try {
+            response.getWriter().write(jsonObject.toString());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         session.setAttribute("JavaSE",list);
         session.removeAttribute("JavaEE");
         session.removeAttribute("Javascript");
